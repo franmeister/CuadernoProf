@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+//Route::group(['middleware' => 'auth'], function () {});
+
+
+Route::post("/home", "homeController@init");
+Route::get("/home", "homeController@index");
